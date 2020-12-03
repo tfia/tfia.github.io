@@ -7,6 +7,7 @@ xmlhttp.onreadystatechange = function (){
 		quotes = JSON.parse(xmlhttp.responseText)
 	}
 }
+xmlhttp.send()
 var t1
 var r = -1
 t1 = r
