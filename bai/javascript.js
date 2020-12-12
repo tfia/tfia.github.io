@@ -1,3 +1,5 @@
+$('#newquotes').attr("disabled",true);
+$('#copy').attr("disabled",true);
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.open('GET', 'bai.json')
 var quotes = null
@@ -5,7 +7,8 @@ xmlhttp.onreadystatechange = function ()
 {
 	if (xmlhttp.readyState == xmlhttp.DONE)
 	{
-		quotes = JSON.parse(xmlhttp.responseText)
+        quotes = JSON.parse(xmlhttp.responseText)
+        $('#newquotes').attr("disabled",false);
 	}
 }
 xmlhttp.send()
@@ -21,6 +24,7 @@ function newquote()
     while(t1 == r)
     t1 = r
     document.getElementById('quote').innerHTML = quotes[r]
+    $('#copy').attr("disabled",false);
 }
 function copyText()
 {
