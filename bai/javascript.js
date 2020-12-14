@@ -15,6 +15,7 @@ xmlhttp.send()
 var t1
 var r = -1
 t1 = r
+document.getElementById('numofquotes').innerHTML = quotes.length
 function newquote()
 {
     do
