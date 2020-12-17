@@ -7,7 +7,7 @@ xmlhttp.onreadystatechange = function ()
 	{
         quotes = JSON.parse(xmlhttp.responseText)
         $('#newquotes').attr("disabled",false);
-        document.getElementById('numofquotes').innerHTML = "本站已经收录语录".concat(quotes.length, "条")
+        document.getElementById('numofquotes').innerHTML = "载入完成。本站目前已经收录语录".concat(quotes.length, "条。")
 	}
 }
 xmlhttp.send()
