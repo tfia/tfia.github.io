@@ -7,13 +7,13 @@ xmlhttp.onreadystatechange = function ()
 	{
         quotes = JSON.parse(xmlhttp.responseText)
         $('#newquotes').attr("disabled",false);
+        document.getElementById('numofquotes').innerHTML = "本站已经收录语录".concat(quotes.length, "条")
 	}
 }
 xmlhttp.send()
 var t1
 var r = -1
 t1 = r
-document.getElementById('numofquotes').innerHTML = "本站已经收录语录".concat(quotes.length, "条")
 function newquote()
 {
     do
