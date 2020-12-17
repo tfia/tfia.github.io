@@ -10,6 +10,9 @@
         <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
         <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
         <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script src="javascript.js"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--<link rel="stylesheet" type="text/css" href="style.css">-->
         <!--引入Font Awesome-->
@@ -22,7 +25,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5">
-                        <h1 class="text-center">白建娥曾经这样说——</h1>
+                        <h1 class="text-center">白建娥曾经这样说</h1>
                     </div>
                 </div>
             </div>
@@ -41,7 +44,7 @@
                     <div class="mt-5">
                         <h4 class="text-center">
 
-                            本站目前已经收录语录<div id="numofquotes"></div>条。
+                            <span id="numofquotes">稍安勿躁，正在载入json。</span>
                         </h4>
                     </div>
                 </div>
@@ -49,12 +52,12 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="mt-5" style="text-align: center">
-                        <button id="newquotes" type="button" class="btn btn-primary btn-lg" onclick="newquote()">探索化学世界</button>
+                        <button id="newquotes" type="button" class="btn btn-primary btn-lg" onclick="newquote()" disabled>探索化学世界</button>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mt-5" style="text-align: center">
-                        <button id="copy" type="button" class="btn btn-outline-primary btn-lg" onclick="copyText()">
+                        <button id="copy" type="button" class="btn btn-outline-primary btn-lg" onclick="copyText()" disabled>
                             一键复制
                         </button>
                     </div>
@@ -111,7 +114,7 @@
             </div>
         </div>
   
-        <script src="javascript.js"></script>
+        
         
     </body>
 </html>
