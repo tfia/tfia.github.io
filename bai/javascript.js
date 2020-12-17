@@ -1,5 +1,3 @@
-$('#newquotes').attr("disabled",true);
-$('#copy').attr("disabled",true);
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.open('GET', 'bai.json')
 var quotes = null
@@ -15,7 +13,7 @@ xmlhttp.send()
 var t1
 var r = -1
 t1 = r
-document.getElementById('numofquotes').innerHTML = quotes.length
+document.getElementById('numofquotes').innerHTML = "本站已经收录语录".concat(quotes.length, "条")
 function newquote()
 {
     do
