@@ -10,28 +10,177 @@
         <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
         <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
         <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script src="javascript.js"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--<link rel="stylesheet" type="text/css" href="style.css">-->
         <!--引入Font Awesome-->
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-        <title>Chtholly online.</title>
+        <title>Sekai.</title>
     </head>
     <body>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5">
-                        <h1 class="text-center"><i class="fa fa-globe" style="font-size:48px"></i>Welcome.</h1>
+                        <h1 class="text-center">白建娥曾经这样说</h1>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5">
-                        <h3 class="text-center"><i class="fa fa-frown-o" style="font-size:36px"></i>Under Construction.</h3>
+                        <h2 class="text-center">
+
+                            <div id="quote"></div>
+                        </h2>
                     </div>
                 </div>
-             </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5">
+                        <h4 class="text-center">
+
+                            <div id="numofquotes">稍安勿躁，正在载入json。</div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mt-5" style="text-align: center">
+                        <button id="newquotes" type="button" class="btn btn-primary btn-lg" onclick="newquote()" disabled><i class="fa fa-flask"></i> 探索化学世界</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-5" style="text-align: center">
+                        <button id="copy" type="button" class="btn btn-outline-primary btn-lg" onclick="copyText()" disabled>
+                            <i class="fa fa-clone"></i> 一键复制
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5" style="text-align: center">
+                        <h1>白建娥曾经这样做</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            	<div class="col-md-12">
+            		<div class="mt-5" style="text-align: center">
+            			<img class="img-fluid" src="https://i.loli.net/2020/12/17/Q4MtB26HXqDm78h.jpg" alt="进行受力分析的白建娥，图片来自g2010友好人士。" width="600">
+            			<p>进行受力分析的白建娥。图片来自g2010友好人士。</p>
+            		</div>
+            	</div>
+            </div>
+
+            <div class="row">
+            	<div class="col-md-12">
+            		<div class="mt-5" style="text-align: center">
+            			<img class="img-fluid" src="https://i.loli.net/2020/12/17/ql3P9gZcf2Li1yb.jpg" alt="手持大卡车的白建娥，图片来自g17级友好人士。" width="500">
+            			<p>白建娥的前微信头像：手持大卡车的白建娥。图片来自g17级友好人士。</p>
+            		</div>
+            	</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5" style="text-align: center">
+                        <h1>白建娥曾经被如此评价</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5" style="text-align: center">
+                        <h3>白建娥，活弥勒，一科参透化史哲。——顾浩然</h3>
+                    </div>
+                    <div class="mt-5" style="text-align: center">
+                        <h3>白特是为数不多的年纪大了却还干劲满满的老师！——某不愿透露姓名的人大附老师</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5" style="text-align: center">
+                        <h1>一位白建娥忠实粉丝的化学书</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-md-12">
+            		<div class="mt-5" style="text-align: center">
+            			<img class="img-fluid" src="https://i.loli.net/2020/12/19/HwTi183cECdP2Qe.jpg" alt="化学书" width="600">
+            		</div>
+            	</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-5" style="text-align: center">
+                        <p>2020-2021 © Sekai. By You-know-who.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pb-5" style="text-align: center">
+                        <button class="btn btn-secondary" data-toggle="modal" data-target="#FAQModal">
+                            常见问题与解答
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="FAQModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        	<h4 class="modal-title" id="ModalTitle">
+                                FAQ
+                            </h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>白建娥老师何许人也？</h2>
+                            
+                            <p>1997年毕业于兰州大学化学系，获理学硕士学位。</p>
+                            
+                            <p>清华附中化学教师，海淀区学科带头人，北京市级骨干教师。</p>
+                            
+                            <p>教学中关注学生的发展，创立“学生演示实验”、“学生讲题”、“问题驱动”等教学模式，并把化学史贯穿于整个教育教学中。教学之余，喜欢研究，并及时固化研究成果。新课程实施以来，已在化学核心期刊上发表三十多篇论文，并出版个人专著一部。</p>
+                            
+                            <p>从事教育工作十八年，担任过清华附中“一条龙”实验班、普通班和创新班班主任。尊重学生个性发展，鼓励学生开拓创新，所带班级多次被评为“优秀班集体”。</p>
+                            
+                            <h2>这个网站用来做什么？</h2>
+                            
+                            <p>本站收录了白建娥金句百余条，供同学们随时学习和参阅，以便更好地体会这个世界的真谛。</p>
+                            
+                            <h2>致谢</h2>
+                            
+                            <p>由于本人的js实在太烂，故本站功能十分简单。感谢zyt帮助完成异步json请求的部分。</p>
+                            
+                            <p>感谢成吉思等同学协助记录大量的金句。</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                了解！
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+  
+        
+        
     </body>
 </html>
+
+
+
+
