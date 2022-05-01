@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open('GET', 'bai.json')
+xmlhttp.open('GET', 'bai2.json')
 var quotes = null
 xmlhttp.onreadystatechange = function ()
 {
